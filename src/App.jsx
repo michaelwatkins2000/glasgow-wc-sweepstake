@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import './App.css'
 
-import { users } from './data/users'
+import { users, avatarFallback } from './data/users'
 import { Fixtures } from './components/Fixtures'
 import { Groups } from './components/Groups'
 import { Knockout } from './components/Knockout'
@@ -69,7 +69,7 @@ export default function App() {
               <img
                 src={`${import.meta.env.BASE_URL}avatars/${user.avatar}`}
                 alt={user.name}
-                onError={e => { e.target.style.display = 'none' }}
+                onError={e => avatarFallback(e, user.name, user.colour)}
               />
             </div>
           ))}

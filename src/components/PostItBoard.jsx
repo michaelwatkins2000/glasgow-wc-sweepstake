@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../lib/supabase'
-import { users } from '../data/users'
+import { users, avatarFallback } from '../data/users'
 import { fixtures } from '../data/fixtures'
 import { assignments } from '../data/sweepstake'
 
@@ -44,7 +44,7 @@ function Avatar({ slug, size = 28 }) {
       alt={user.name}
       className="post-card__avatar"
       style={{ width: size, height: size, borderColor: user.colour }}
-      onError={e => { e.target.style.display = 'none' }}
+      onError={e => avatarFallback(e, user.name, user.colour)}
     />
   )
 }
@@ -378,7 +378,7 @@ export function PostItBoard({ selectedUser }) {
         </select>
         <textarea
           className="post-compose__textarea"
-          placeholder="Write a challenge, prediction or bit of banter..."
+          placeholder="💰 Write your Challenge here... 🍻"
           value={message}
           onChange={e => setMessage(e.target.value)}
           rows={3}

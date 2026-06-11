@@ -1,81 +1,63 @@
 export const assignments = {
-  // Wilky
-  "Panama":               { user: "wilky",   flag: "pa" },
-  "Switzerland":          { user: "wilky",   flag: "ch" },
-  "England":              { user: "wilky",   flag: "gb-eng" },
+  // Ollie
+  "Colombia":             { user: "ollie",   flag: "co" },
+  "USA":                  { user: "ollie",   flag: "us" },
+  "Sweden":               { user: "ollie",   flag: "se" },
+  "Qatar":                { user: "ollie",   flag: "qa" },
+  "Iran":                 { user: "ollie",   flag: "ir" },
+  "Australia":            { user: "ollie",   flag: "au" },
+  "Mexico":               { user: "ollie",   flag: "mx" },
 
-  // Watkins
-  "Saudi Arabia":         { user: "watkins", flag: "sa" },
-  "Senegal":              { user: "watkins", flag: "sn" },
-  "Spain":                { user: "watkins", flag: "es" },
+  // Joe
+  "Brazil":               { user: "joe",     flag: "br" },
+  "Uruguay":              { user: "joe",     flag: "uy" },
+  "Cape Verde":           { user: "joe",     flag: "cv" },
+  "Austria":              { user: "joe",     flag: "at" },
+  "Saudi Arabia":         { user: "joe",     flag: "sa" },
+  "Bosnia & Herzegovina": { user: "joe",     flag: "ba" },
+  "Egypt":                { user: "joe",     flag: "eg" },
 
-  // Ben
-  "South Africa":         { user: "ben",     flag: "za" },
-  "Bosnia & Herzegovina": { user: "ben",     flag: "ba" },
-  "Colombia":             { user: "ben",     flag: "co" },
+  // Roddy
+  "Germany":              { user: "roddy",   flag: "de" },
+  "Norway":               { user: "roddy",   flag: "no" },
+  "Uzbekistan":           { user: "roddy",   flag: "uz" },
+  "Senegal":              { user: "roddy",   flag: "sn" },
+  "Croatia":              { user: "roddy",   flag: "hr" },
+  "Jordan":               { user: "roddy",   flag: "jo" },
+  "Algeria":              { user: "roddy",   flag: "dz" },
 
-  // Patrick
-  "Czechia":              { user: "patrick", flag: "cz" },
-  "Canada":               { user: "patrick", flag: "ca" },
-  "France":               { user: "patrick", flag: "fr" },
+  // Nathan
+  "Spain":                { user: "nathan",  flag: "es" },
+  "France":               { user: "nathan",  flag: "fr" },
+  "Ecuador":              { user: "nathan",  flag: "ec" },
+  "Iraq":                 { user: "nathan",  flag: "iq" },
+  "Haiti":                { user: "nathan",  flag: "ht" },
+  "Panama":               { user: "nathan",  flag: "pa" },
+  "Tunisia":              { user: "nathan",  flag: "tn" },
 
-  // Alex
-  "Egypt":                { user: "alex",    flag: "eg" },
-  "Austria":              { user: "alex",    flag: "at" },
-  "Norway":               { user: "alex",    flag: "no" },
+  // Matty
+  "England":              { user: "matty",   flag: "gb-eng" },
+  "Netherlands":          { user: "matty",   flag: "nl" },
+  "South Korea":          { user: "matty",   flag: "kr" },
+  "Ivory Coast":          { user: "matty",   flag: "ci" },
+  "DR Congo":             { user: "matty",   flag: "cd" },
+  "Czechia":              { user: "matty",   flag: "cz" },
+  "Ghana":                { user: "matty",   flag: "gh" },
 
-  // Lucy
-  "Uzbekistan":           { user: "lucy",    flag: "uz" },
-  "Curaçao":              { user: "lucy",    flag: "cw" },
-  "Uruguay":              { user: "lucy",    flag: "uy" },
+  // Ruaridh
+  "Portugal":             { user: "ruaridh", flag: "pt" },
+  "Japan":                { user: "ruaridh", flag: "jp" },
+  "New Zealand":          { user: "ruaridh", flag: "nz" },
+  "Scotland":             { user: "ruaridh", flag: "gb-sct" },
+  "Morocco":              { user: "ruaridh", flag: "ma" },
+  "South Africa":         { user: "ruaridh", flag: "za" },
+  "Paraguay":             { user: "ruaridh", flag: "py" },
 
-  // Jack
-  "Ghana":                { user: "jack",    flag: "gh" },
-  "Algeria":              { user: "jack",    flag: "dz" },
-  "Croatia":              { user: "jack",    flag: "hr" },
-
-  // Rachel
-  "South Korea":          { user: "rachel",  flag: "kr" },
-  "Sweden":               { user: "rachel",  flag: "se" },
-  "Morocco":              { user: "rachel",  flag: "ma" },
-
-  // Jude
-  "Iraq":                 { user: "jude",    flag: "iq" },
-  "Australia":            { user: "jude",    flag: "au" },
-  "Japan":                { user: "jude",    flag: "jp" },
-
-  // Megan
-  "Qatar":                { user: "megan",   flag: "qa" },
-  "Paraguay":             { user: "megan",   flag: "py" },
-  "Portugal":             { user: "megan",   flag: "pt" },
-
-  // Jamie
-  "DR Congo":             { user: "jamie",   flag: "cd" },
-  "Cape Verde":           { user: "jamie",   flag: "cv" },
-  "Netherlands":          { user: "jamie",   flag: "nl" },
-
-  // Lauren
-  "New Zealand":          { user: "lauren",  flag: "nz" },
-  "Ivory Coast":          { user: "lauren",  flag: "ci" },
-  "Argentina":            { user: "lauren",  flag: "ar" },
-
-  // Gambles
-  "Tunisia":              { user: "gambles", flag: "tn" },
-  "Ecuador":              { user: "gambles", flag: "ec" },
-  "Belgium":              { user: "gambles", flag: "be" },
-
-  // Danny
-  "Haiti":                { user: "danny",   flag: "ht" },
-  "Scotland":             { user: "danny",   flag: "gb-sct" },
-  "USA":                  { user: "danny",   flag: "us" },
-
-  // Owen
-  "Iran":                 { user: "owen",    flag: "ir" },
-  "Turkey":               { user: "owen",    flag: "tr" },
-  "Brazil":               { user: "owen",    flag: "br" },
-
-  // Colm
-  "Jordan":               { user: "colm",     flag: "jo" },
-  "Mexico":               { user: "colm",     flag: "mx" },
-  "Germany":              { user: "colm",     flag: "de" },
+  // Adam
+  "Argentina":            { user: "adam",    flag: "ar" },
+  "Belgium":              { user: "adam",    flag: "be" },
+  "Turkey":               { user: "adam",    flag: "tr" },
+  "Curaçao":              { user: "adam",    flag: "cw" },
+  "Switzerland":          { user: "adam",    flag: "ch" },
+  "Canada":               { user: "adam",    flag: "ca" },
 }

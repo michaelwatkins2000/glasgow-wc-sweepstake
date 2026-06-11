@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { fixtures } from '../data/fixtures'
 import { assignments } from '../data/sweepstake'
-import { users } from '../data/users'
+import { users, avatarFallback } from '../data/users'
 
 function formatDate(iso) {
   const d = new Date(iso + 'T00:00:00')
@@ -27,7 +27,7 @@ function AvatarBubble({ user, dimmed }) {
             src={`${import.meta.env.BASE_URL}avatars/${user.avatar}`}
             alt={user.name}
             className="avatar-bubble__img"
-            onError={e => { e.target.style.display = 'none' }}
+            onError={e => avatarFallback(e, user.name, user.colour)}
           />
         : <span className="avatar-bubble__placeholder">?</span>
       }

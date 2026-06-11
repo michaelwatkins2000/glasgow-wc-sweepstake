@@ -1,6 +1,6 @@
 import { groups } from '../data/groups'
 import { assignments } from '../data/sweepstake'
-import { users } from '../data/users'
+import { users, avatarFallback } from '../data/users'
 
 const SHORT_NAMES = {
   "Bosnia & Herzegovina": "Bosnia",
@@ -93,7 +93,7 @@ function GroupTable({ letter, teams, selectedUser }) {
                       className="owner-avatar"
                       title={row.user.name}
                       style={{ borderColor: row.user.colour }}
-                      onError={e => { e.target.style.display = 'none' }}
+                      onError={e => avatarFallback(e, row.user.name, row.user.colour)}
                     />
                   )}
                 </td>
