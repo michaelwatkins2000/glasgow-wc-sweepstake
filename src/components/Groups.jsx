@@ -1,6 +1,7 @@
 import { groups } from '../data/groups'
+import { fixtures } from '../data/fixtures'
 import { assignments } from '../data/sweepstake'
-import { users, avatarFallback } from '../data/users'
+import { users } from '../data/users'
 
 const SHORT_NAMES = {
   "Bosnia & Herzegovina": "Bosnia",
@@ -27,11 +28,41 @@ function getFlag(team) {
   return info ? `https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/${info.flag}.svg` : null
 }
 
+function computeStandings(groupLetter, teamList) {
+  // Seed from groups.js so team order/names are preserved
+  const stats = {}
+  teamList.forEach(t => {
+    stats[t.team] = { team: t.team, played: 0, won: 0, drawn: 0, lost: 0, gf: 0, ga: 0 }
+  })
+
+  fixtures
+    .filter(f => f.stage === 'group' && f.group === groupLetter && f.homeScore !== null && f.awayScore !== null)
+    .forEach(f => {
+      const h = stats[f.home]
+      const a = stats[f.away]
+      if (!h || !a) return
+
+      h.played++; a.played++
+      h.gf += f.homeScore; h.ga += f.awayScore
+      a.gf += f.awayScore; a.ga += f.homeScore
+
+      if (f.homeScore > f.awayScore) {
+        h.won++; a.lost++
+      } else if (f.homeScore < f.awayScore) {
+        a.won++; h.lost++
+      } else {
+        h.drawn++; a.drawn++
+      }
+    })
+
+  return Object.values(stats)
+    .map(t => ({ ...t, gd: t.gf - t.ga, pts: t.won * 3 + t.drawn }))
+    .sort((a, b) => b.pts - a.pts || b.gd - a.gd || b.gf - a.gf)
+}
+
 function GroupTable({ letter, teams, selectedUser }) {
-  const rows = teams.map(t => ({
+  const rows = computeStandings(letter, teams).map(t => ({
     ...t,
-    gd: t.gf - t.ga,
-    pts: t.won * 3 + t.drawn,
     user: getUser(t.team),
     flagSrc: getFlag(t.team),
   }))
@@ -93,7 +124,7 @@ function GroupTable({ letter, teams, selectedUser }) {
                       className="owner-avatar"
                       title={row.user.name}
                       style={{ borderColor: row.user.colour }}
-                      onError={e => avatarFallback(e, row.user.name, row.user.colour)}
+                      onError={e => { e.target.style.display = 'none' }}
                     />
                   )}
                 </td>
