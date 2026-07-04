@@ -96,7 +96,7 @@ export const fixtures = [
 
   // ── Round of 16 ──────────────────────────────────────────────────────────
   { id: 537376, date: "2026-07-04", time: "18:00", stage: "r16", group: null, home: null, away: null, homeScore: 0, awayScore: 3 },
-  { id: 537375, date: "2026-07-04", time: "22:00", stage: "r16", group: null, home: null, away: null, homeScore: null, awayScore: null },
+  { id: 537375, date: "2026-07-04", time: "22:00", stage: "r16", group: null, home: null, away: null, homeScore: 0, awayScore: 1 },
   { id: 537377, date: "2026-07-05", time: "21:00", stage: "r16", group: null, home: null, away: null, homeScore: null, awayScore: null },
   { id: 537378, date: "2026-07-06", time: "01:00", stage: "r16", group: null, home: null, away: null, homeScore: null, awayScore: null },
   { id: 537379, date: "2026-07-06", time: "20:00", stage: "r16", group: null, home: null, away: null, homeScore: null, awayScore: null },
