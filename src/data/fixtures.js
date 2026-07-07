@@ -102,7 +102,7 @@ export const fixtures = [
   { id: 537379, date: "2026-07-06", time: "20:00", stage: "r16", group: null, home: null, away: null, homeScore: 0, awayScore: 1 },
   { id: 537380, date: "2026-07-07", time: "01:00", stage: "r16", group: null, home: null, away: null, homeScore: 1, awayScore: 4 },
   { id: 537381, date: "2026-07-07", time: "17:00", stage: "r16", group: null, home: null, away: null, homeScore: 3, awayScore: 2 },
-  { id: 537382, date: "2026-07-07", time: "21:00", stage: "r16", group: null, home: null, away: null, homeScore: null, awayScore: null },
+  { id: 537382, date: "2026-07-07", time: "21:00", stage: "r16", group: null, home: null, away: null, homeScore: 4, awayScore: 3 },
 
   // ── Quarter-finals ───────────────────────────────────────────────────────
   { id: 537383, date: "2026-07-09", time: "21:00", stage: "qf",    group: null, home: null, away: null, homeScore: null, awayScore: null },
