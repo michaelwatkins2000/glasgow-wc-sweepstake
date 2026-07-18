@@ -115,6 +115,6 @@ export const fixtures = [
   { id: 537388, date: "2026-07-15", time: "20:00", stage: "sf",    group: null, home: null, away: null, homeScore: 1, awayScore: 2 },
 
   // ── Third place & Final ──────────────────────────────────────────────────
-  { id: 537389, date: "2026-07-18", time: "22:00", stage: "3rd",   group: null, home: null, away: null, homeScore: null, awayScore: null },
+  { id: 537389, date: "2026-07-18", time: "22:00", stage: "3rd",   group: null, home: null, away: null, homeScore: 4, awayScore: 6 },
   { id: 537390, date: "2026-07-19", time: "20:00", stage: "final", group: null, home: null, away: null, homeScore: null, awayScore: null },
 ]
